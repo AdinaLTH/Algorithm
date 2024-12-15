@@ -1,9 +1,10 @@
+import java.io.*;
 import java.util.*;
 
 public class Main {
 
-    public static void main(String[] args) {
-        HashMap map = new HashMap();
+    public static void main(String[] args) throws IOException {
+        HashMap<String, String> map = new HashMap<>();
         map.put("A+", "4.3");
         map.put("A0", "4.0");
         map.put("A-", "3.7");
@@ -18,7 +19,10 @@ public class Main {
         map.put("D-", "0.7");
         map.put("F", "0.0");
 
-        Scanner sc = new Scanner(System.in);
-        System.out.println(map.get(sc.nextLine()));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String s = br.readLine();
+        System.out.println(map.get(s));
+
+        br.close();
     }
 }
