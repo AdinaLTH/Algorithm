@@ -26,9 +26,9 @@ public class Main {
 
         int dif = Math.min(mid - min, max - mid);
         if (mid-min != max-mid) {
-            if (mid - min < max - mid) {
+            if (mid - min == dif) {
                 System.out.println(mid + dif);
-            } else if (mid - min > max - mid) {
+            } else if (max - mid == dif) {
                 System.out.println(mid - dif);
             }
         } else {
